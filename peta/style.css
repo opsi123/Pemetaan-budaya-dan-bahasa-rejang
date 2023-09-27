@@ -1,0 +1,38 @@
+.body {
+  font-family: "poppins", sans-serif;
+    background-color:silver;
+    color: black;
+}
+
+.peta {
+    padding: 5rem 5% 1.5rem;
+    background-color: silver;
+  }
+  
+  .peta h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .peta p {
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    line-height: 2.2rem;
+  }
+ .peta .row .img {
+  text-align: center;
+  flex: 5  5rem;
+ }
+  .peta .row .img img {
+    border-radius: 0%;
+    width: 100%;
+  }
+
+  /* laptop */
+  @media (max-width: 500px){
+    html{
+      font-size: 75%;
+    }
+  }

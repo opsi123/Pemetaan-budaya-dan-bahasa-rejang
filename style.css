@@ -1,0 +1,273 @@
+:root {
+    --primary:
+    background-color: brown;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  body { 
+    font-family: "poppins", sans-serif;
+    background-color:#F6F4F1;
+    color: black;
+    min-height: 3000px;
+  
+  }
+  
+  /* navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    border-bottom: 2px solid ;
+    background-color: #F6F4F1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: tomato;
+  }
+  
+  .navbar .navbar-nav a {
+  color: tomato ;
+  display: inline-block;
+  font-size: 1, 3rem;
+  margin: 0 1rem;
+  }
+  
+  .navbar .navbar-nav a:hover {
+    color:tomato
+  }
+  
+  .navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid tomato;
+    transform: scaleX(0);
+    transition: 0.2 linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  }
+  
+  .navbar .navbar-extra a {
+    color: blue;
+    margin: 0 0.5rem;
+  }
+  
+  .navbar .navbar-extra a:hover {
+    color: tomato;
+  }
+  #menu {
+    display: none;
+  }
+  
+  
+  /* hero section */
+  
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image:url(PEDANG\ \(1\).png) ;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  .hero .content {
+    padding: 1rem 5%;
+    max-width: 45rem;
+  }
+  
+  .hero .content h1 {
+    font-size: 2rem;
+    color: white;
+    line-height: 1.2;
+  }
+  
+  .hero .content h2 {
+    font-size: 1.5rem;
+    color: tomato;
+    line-height: 1.5;
+  }
+  
+  .hero .content p {
+    color: white;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    line-height: 2.2rem;
+  }
+  
+  /* peta */
+  .peta {
+    padding: 5rem 5% 1.5rem;
+  }
+  
+  .peta h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .peta .row{
+    display: flex;
+  }
+  
+  .peta .row .peta-img {
+  flex: 5 5rem;
+  }
+  
+  .peta .row .peta-img img {
+    width: 100%;
+  }
+  .row {
+    padding: 5rem 5% 1.5rem;
+    align-items: center;
+  }
+  
+  .row h4 {
+    display: flex;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem 5%;
+  }
+  
+  .tentang {
+    padding: 10rem 5% 1.5rem;
+  }
+  
+  .tentang h6 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .tentang .kontak {
+    display: flex;
+    margin-top: 2rem;
+    background-color: gray;
+  }
+  
+  .tentang .kontak .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .tentang .kontak form{
+    flex: 1 1 25rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+  
+  .tentang .kontak form .input-group{
+     display: flex;
+     align-items: center;
+     margin-top: 2rem;
+     background-color: #F6F4F1;
+     border:  1px solid black;
+     padding-left: 2rem;
+  }
+  
+  .tentang .kontak form .input-group input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+  }
+  
+  .tentang .kontak form  .btn {
+   margin-top: 3rem;
+   display: inline-block;
+   padding: 1rem 3rem;
+   font-size: 1.7rem;
+   color: #F6F4F1;
+   background-color: tomato;
+   cursor: pointer;
+  }
+  
+  
+  
+  
+  /*media queries*\
+  
+  /* laptop */
+  @media (max-width: 1366px){
+    html{
+      font-size: 75%;
+    }
+  }
+  
+  /* tablet */
+  @media (max-width: 768px){
+    html {
+      font-size: 62,5%;
+    }
+  
+    #menu{
+      display: inline-block;
+    }
+  
+    .navbar .navbar-nav {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: black;
+      width: 25rem;
+      height: 100vh;
+    }
+  
+    .navbar .navbar-nav.active {
+    right: 0;
+    }
+  
+    .navbar .navbar-nav a{
+      color: white;
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+    }
+  
+    .navbar .navbar-nav a::after{
+      transform-origin: 0 0;
+    }
+  
+    .navbar .navbar-nav a:hover::after{
+      transform:scaleX(0.2);
+    }
+  
+  
+    .tentang .kontak {
+      flex-wrap: wrap;
+    }
+  
+    .tentang .kontak .map {
+      height: 25rem;
+    }
+  }
+  
+  
+  /* hp */
+  @media (max-width: 450px){
+    html {
+      font-size: 55%;
+    }
+  }
